@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\dotnet-examples\\rest-with-asp-net-10-lab\\rest-with-asp-net-10-lab.csproj": {}
+    "C:\\Users\\HP\\Desktop\\rest-with-asp-net-10-lab\\rest-with-asp-net-10-lab.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\dotnet-examples\\rest-with-asp-net-10-lab\\rest-with-asp-net-10-lab.csproj": {
+    "C:\\Users\\HP\\Desktop\\rest-with-asp-net-10-lab\\rest-with-asp-net-10-lab.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\dotnet-examples\\rest-with-asp-net-10-lab\\rest-with-asp-net-10-lab.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\rest-with-asp-net-10-lab\\rest-with-asp-net-10-lab.csproj",
         "projectName": "rest-with-asp-net-10-lab",
-        "projectPath": "C:\\Users\\HP\\Desktop\\dotnet-examples\\rest-with-asp-net-10-lab\\rest-with-asp-net-10-lab.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\rest-with-asp-net-10-lab\\rest-with-asp-net-10-lab.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\dotnet-examples\\rest-with-asp-net-10-lab\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\rest-with-asp-net-10-lab\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -46,6 +46,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.26, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[9.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

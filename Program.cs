@@ -1,4 +1,3 @@
-using HelloWorldApi.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
@@ -6,7 +5,8 @@ builder.Services.AddControllers();
 // Add services to the container.
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<MathService>();
+builder.Services.AddDatabaseConfig(builder.Configuration);
+builder.Services.AddScoped<Services.IPersonService, Services.PersonService>();
 
 var app = builder.Build();
 
