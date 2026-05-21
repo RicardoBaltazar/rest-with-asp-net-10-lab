@@ -9,16 +9,21 @@ namespace Controllers
     {
 
         private readonly Services.IPersonService _personService;
+        private readonly ILogger<PersonController> _logger;
 
-        public PersonController(Services.IPersonService personService)
+        public PersonController(
+            Services.IPersonService personService, ILogger<PersonController> logger
+        )
         {
             _personService = personService;
+            _logger = logger;
         }
 
         [HttpGet]
         public IActionResult Get()
         {
             var person = _personService.getById(1);
+            _logger.LogInformation("Fetched person with ID 1: {@Person}", person);
 
             return Ok(person);
         }
@@ -26,9 +31,10 @@ namespace Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
+            _logger.LogInformation("Fetching person with ID {PersonId}", id);
             var person = _personService.getById(id);
             if (person == null) return NotFound();
-            
+
             return Ok(person);
         }
 
@@ -36,6 +42,7 @@ namespace Controllers
         public IActionResult Create(Person person)
         {
             var createdPerson = _personService.create(person);
+            _logger.LogInformation("Created a new person with ID {PersonId}", createdPerson.Id);
 
             return Ok(createdPerson);
         }
@@ -47,9 +54,9 @@ namespace Controllers
 
             return Ok(updatedPerson);
         }
- 
 
-         [HttpDelete("{id}")]
+
+        [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             _personService.delete(id);
