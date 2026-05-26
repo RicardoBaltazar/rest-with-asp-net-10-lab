@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("rest-with-asp-net-10-lab")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7b1514de0b6b96a9baff4615602ee8f9c07154c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11e27e2bfbcd54f0e4162687cdbf65b6dd0d4669")]
 [assembly: System.Reflection.AssemblyProductAttribute("rest-with-asp-net-10-lab")]
 [assembly: System.Reflection.AssemblyTitleAttribute("rest-with-asp-net-10-lab")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

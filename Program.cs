@@ -9,7 +9,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDatabaseConfig(builder.Configuration);
+builder.Services.AddScoped<Repositories.IPersonRepository, Repositories.Impl.PersonRepository>();
 builder.Services.AddScoped<Services.IPersonService, Services.PersonService>();
+
 
 var app = builder.Build();
 
