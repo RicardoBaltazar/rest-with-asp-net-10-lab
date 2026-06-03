@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tC0Q9kXqf34=",
+  "dgSpecHash": "O+pGoC8JomE=",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\Desktop\\rest-with-asp-net-10-lab\\rest-with-asp-net-10-lab.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\evolve\\3.2.0\\evolve.3.2.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.26\\microsoft.aspnetcore.openapi.8.0.26.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.0\\microsoft.entityframeworkcore.9.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.0\\microsoft.entityframeworkcore.abstractions.9.0.0.nupkg.sha512",

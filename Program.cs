@@ -11,6 +11,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDatabaseConfig(builder.Configuration);
 builder.Services.AddScoped<Repositories.IPersonRepository, Repositories.Impl.PersonRepository>();
 builder.Services.AddScoped<Services.IPersonService, Services.PersonService>();
+builder.Services.AddScoped<Repositories.IBookRepository, Repositories.Impl.BookRepository>();
+builder.Services.AddScoped<Services.IBookService, Services.BookService>();
+builder.Services.AddEvolve(builder.Configuration, builder.Environment);
 
 
 var app = builder.Build();

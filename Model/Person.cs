@@ -3,8 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Model
 {
-    [Table("Persons")]
-
+    [Table("person")]
     public class Person
     {
         [Key]
@@ -14,14 +13,14 @@ namespace Model
 
         [Column("first_name", TypeName = "varchar(100)")]
         [Required]
-        public string FirstName { get; set; }
+        public required string FirstName { get; set; }
 
         [Column("last_name", TypeName = "varchar(100)")]
-        public string LastName { get; set; }
+        public string? LastName { get; set; }
 
         [Column("address", TypeName = "varchar(225)")]
         [Required]
-        public string Address { get; set; }
+        public required string Address { get; set; }
 
         [Column("age")]
         [Required]

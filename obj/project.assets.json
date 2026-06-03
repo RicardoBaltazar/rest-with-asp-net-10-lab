@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "Evolve/3.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Evolve.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Evolve.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/8.0.26": {
         "type": "package",
         "dependencies": {
@@ -732,6 +745,20 @@
     }
   },
   "libraries": {
+    "Evolve/3.2.0": {
+      "sha512": "MSkI0OHrwqKYwykHdp0GIiLgaBEVl1mMJjO5R5sebj2X0kPOfWTNs47SuNc5Yka8OruvIOlHre0eZRm5BBtnGg==",
+      "type": "package",
+      "path": "evolve/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "evolve.3.2.0.nupkg.sha512",
+        "evolve.nuspec",
+        "lib/netstandard2.0/Evolve.dll",
+        "lib/netstandard2.0/Evolve.pdb",
+        "lib/netstandard2.0/Evolve.xml"
+      ]
+    },
     "Microsoft.AspNetCore.OpenApi/8.0.26": {
       "sha512": "7fGW6HIjDkISnHZoLoo7m9EOA1G1MLgxX+PBSaQa92Gq4wulbhw292J7aRK1BXI282ICaYg5sBoC+shKf7tcLg==",
       "type": "package",
@@ -2097,6 +2124,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Evolve >= 3.2.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.26",
       "Pomelo.EntityFrameworkCore.MySql >= 9.0.0",
       "Serilog.AspNetCore >= 10.0.0",
@@ -2148,6 +2176,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Evolve": {
+            "target": "Package",
+            "version": "[3.2.0, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[8.0.26, )"
