@@ -4,13 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Model
 {
     [Table("person")]
-    public class Person
+    public class Person: Base.BaseEntity
     {
-        [Key]
-        [Column("id")]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
-
         [Column("first_name", TypeName = "varchar(100)")]
         [Required]
         public required string FirstName { get; set; }

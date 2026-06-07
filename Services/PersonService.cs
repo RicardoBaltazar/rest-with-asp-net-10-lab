@@ -6,36 +6,36 @@ namespace Services
     public class PersonService: IPersonService
     {
 
-        private Repositories.IPersonRepository _personRepository;
+        private Repositories.IRepository<Person> _repository;
 
-        public PersonService(Repositories.IPersonRepository personRepository)
+        public PersonService(Repositories.IRepository<Person> repository)
         {
-            _personRepository = personRepository;
+            _repository = repository;
         }
 
         public Person create(Person person)
         {
-            return _personRepository.create(person);
+            return _repository.create(person);
         }
 
         public void delete(int id)
         {
-            _personRepository.delete(id);
+            _repository.delete(id);
         }
 
         public List<Person> getAll()
         {
-            return _personRepository.getAll();
+            return _repository.getAll();
         }
 
         public Person getById(int id)
         {
-            return _personRepository.getById(id);
+            return _repository.getById(id);
         }
 
         public Person update(int id, Person person)
         {
-            return _personRepository.update(id, person);
+            return _repository.update(id, person);
         }
 
     }

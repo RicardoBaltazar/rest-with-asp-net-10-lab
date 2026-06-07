@@ -4,9 +4,9 @@ namespace Services
 {
     public class BookService : IBookService
     {
-        private Repositories.IBookRepository _bookRepository;
+        private Repositories.IRepository<Book> _bookRepository;
 
-        public BookService(Repositories.IBookRepository bookRepository)
+        public BookService(Repositories.IRepository<Book> bookRepository)
         {
             _bookRepository = bookRepository;
         }

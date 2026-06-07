@@ -9,10 +9,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDatabaseConfig(builder.Configuration);
-builder.Services.AddScoped<Repositories.IPersonRepository, Repositories.Impl.PersonRepository>();
 builder.Services.AddScoped<Services.IPersonService, Services.PersonService>();
-builder.Services.AddScoped<Repositories.IBookRepository, Repositories.Impl.BookRepository>();
 builder.Services.AddScoped<Services.IBookService, Services.BookService>();
+
+builder.Services.AddScoped(typeof(Repositories.IRepository<>), typeof(Repositories.Impl.GenericRepository<>));
+
+
 builder.Services.AddEvolve(builder.Configuration, builder.Environment);
 
 
