@@ -1,13 +1,14 @@
+using Data.DTO;
 using Model;
 
 namespace Services
 {
     public interface IBookService
     {
-        Book create(Book book);
-        Book getById(int id);
-        List<Book> getAll();
-        Book update(int id, Book book);
+        BookDTO create(BookDTO book);
+        BookDTO getById(int id);
+        List<BookDTO> getAll();
+        BookDTO update(int id, BookDTO book);
         void delete(int id);
     }
 }

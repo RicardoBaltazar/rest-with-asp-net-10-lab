@@ -15,6 +15,40 @@
           }
         }
       },
+      "Mapster/10.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Mapster.Core": "10.0.8"
+        },
+        "compile": {
+          "lib/net8.0/Mapster.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Mapster.dll": {}
+        }
+      },
+      "Mapster.Core/10.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Mapster.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Mapster.Core.dll": {}
+        }
+      },
+      "Mapster.DependencyInjection/10.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Mapster": "10.0.8",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Mapster.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Mapster.DependencyInjection.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/8.0.26": {
         "type": "package",
         "dependencies": {
@@ -757,6 +791,51 @@
         "lib/netstandard2.0/Evolve.dll",
         "lib/netstandard2.0/Evolve.pdb",
         "lib/netstandard2.0/Evolve.xml"
+      ]
+    },
+    "Mapster/10.0.8": {
+      "sha512": "61lfpYqea8kaVs5SpexI/2tySidrVZm5ppUT38CkoyyyclErPdh07qlBfpNOcbPcRZ+A5SGlZ2atFFolcDVmwQ==",
+      "type": "package",
+      "path": "mapster/10.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net10.0/Mapster.dll",
+        "lib/net8.0/Mapster.dll",
+        "lib/net9.0/Mapster.dll",
+        "lib/netstandard2.0/Mapster.dll",
+        "mapster.10.0.8.nupkg.sha512",
+        "mapster.nuspec"
+      ]
+    },
+    "Mapster.Core/10.0.8": {
+      "sha512": "KV2IpL6jC2HR9Yul/MeyY+vSmeeXfM3lgBMdhORXtILYLph/n3lH7tvAdIE29CkSAoTy5naw1H+Y8665GBoMwA==",
+      "type": "package",
+      "path": "mapster.core/10.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Mapster.Core.dll",
+        "mapster.core.10.0.8.nupkg.sha512",
+        "mapster.core.nuspec"
+      ]
+    },
+    "Mapster.DependencyInjection/10.0.8": {
+      "sha512": "btyfp7zWjLnyykPU4tSlx8cDwARcLO/Nulj+cs0edDmp/Ni2+vgp/QUxiLRUIwsxARwkygxYw/8WDBqtxBe89A==",
+      "type": "package",
+      "path": "mapster.dependencyinjection/10.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net10.0/Mapster.DependencyInjection.dll",
+        "lib/net8.0/Mapster.DependencyInjection.dll",
+        "lib/net9.0/Mapster.DependencyInjection.dll",
+        "lib/netstandard2.0/Mapster.DependencyInjection.dll",
+        "mapster.dependencyinjection.10.0.8.nupkg.sha512",
+        "mapster.dependencyinjection.nuspec"
       ]
     },
     "Microsoft.AspNetCore.OpenApi/8.0.26": {
@@ -2125,6 +2204,8 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Evolve >= 3.2.0",
+      "Mapster >= 10.0.8",
+      "Mapster.DependencyInjection >= 10.0.8",
       "Microsoft.AspNetCore.OpenApi >= 8.0.26",
       "Pomelo.EntityFrameworkCore.MySql >= 9.0.0",
       "Serilog.AspNetCore >= 10.0.0",
@@ -2179,6 +2260,14 @@
           "Evolve": {
             "target": "Package",
             "version": "[3.2.0, )"
+          },
+          "Mapster": {
+            "target": "Package",
+            "version": "[10.0.8, )"
+          },
+          "Mapster.DependencyInjection": {
+            "target": "Package",
+            "version": "[10.0.8, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",

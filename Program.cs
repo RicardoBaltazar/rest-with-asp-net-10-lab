@@ -1,4 +1,6 @@
 using Configurations;
+using Data.DTO;
+using Data.Converter.Impl;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDatabaseConfig(builder.Configuration);
 builder.Services.AddScoped<Services.IPersonService, Services.PersonService>();
+builder.Services.AddScoped<PersonConverter>();
 builder.Services.AddScoped<Services.IBookService, Services.BookService>();
 
 builder.Services.AddScoped(typeof(Repositories.IRepository<>), typeof(Repositories.Impl.GenericRepository<>));

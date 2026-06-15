@@ -1,42 +1,55 @@
 using Model;
-using Model.Context;
+using Data.DTO;
+using Data.Converter.Impl;
 
 namespace Services
 {
-    public class PersonService: IPersonService
+    public class PersonService(
+        Repositories.IRepository<Person> repository,
+        PersonConverter converter
+    ) : IPersonService
     {
 
-        private Repositories.IRepository<Person> _repository;
+        private readonly Repositories.IRepository<Person> _repository = repository;
+        private readonly PersonConverter _converter = converter;
 
-        public PersonService(Repositories.IRepository<Person> repository)
+
+        public PersonDTO Create(PersonDTO person)
         {
-            _repository = repository;
+            return _converter.Parse(
+                _repository.create(
+                    _converter.Parse(person)
+                )
+            );
         }
 
-        public Person create(Person person)
-        {
-            return _repository.create(person);
-        }
-
-        public void delete(int id)
+        public void Delete(int id)
         {
             _repository.delete(id);
         }
 
-        public List<Person> getAll()
+        public List<PersonDTO> GetAll()
         {
-            return _repository.getAll();
+            return _converter.ParseList(
+                _repository.getAll()
+            );
         }
 
-        public Person getById(int id)
+        public PersonDTO GetById(int id)
         {
-            return _repository.getById(id);
+            return _converter.Parse(
+                _repository.getById(id)
+            );
         }
 
-        public Person update(int id, Person person)
+        public PersonDTO Update(int id, PersonDTO person)
         {
-            return _repository.update(id, person);
+            return _converter.Parse(
+                _repository.update(
+                    id,
+                    _converter.Parse(person)
+                )
+            );
         }
-
     }
 }

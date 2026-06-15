@@ -1,3 +1,4 @@
+using Data.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Model;
 
@@ -22,7 +23,7 @@ namespace Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var person = _personService.getById(1);
+            var person = _personService.GetById(1);
             _logger.LogInformation("Fetched person with ID 1: {@Person}", person);
 
             return Ok(person);
@@ -32,25 +33,25 @@ namespace Controllers
         public IActionResult GetById(int id)
         {
             _logger.LogInformation("Fetching person with ID {PersonId}", id);
-            var person = _personService.getById(id);
+            var person = _personService.GetById(id);
             if (person == null) return NotFound();
 
             return Ok(person);
         }
 
         [HttpPost]
-        public IActionResult Create(Person person)
+        public IActionResult Create(PersonDTO person)
         {
-            var createdPerson = _personService.create(person);
+            var createdPerson = _personService.Create(person);
             _logger.LogInformation("Created a new person with ID {PersonId}", createdPerson.Id);
 
             return Ok(createdPerson);
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, Person person)
+        public IActionResult Update(int id, PersonDTO person)
         {
-            var updatedPerson = _personService.update(id, person);
+            var updatedPerson = _personService.Update(id, person);
 
             return Ok(updatedPerson);
         }
@@ -59,7 +60,7 @@ namespace Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            _personService.delete(id);
+            _personService.Delete(id);
 
             return NoContent();
         }

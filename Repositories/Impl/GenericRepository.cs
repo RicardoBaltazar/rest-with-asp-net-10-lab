@@ -12,10 +12,12 @@ namespace Repositories.Impl
             _context = context;
             _dataSet = _context.Set<T>();
         }
-
         public T create(T entity)
         {
-            return _dataSet.Add(entity).Entity;
+            _dataSet.Add(entity);
+            _context.SaveChanges();
+
+            return entity;
         }
 
         public void delete(int id)

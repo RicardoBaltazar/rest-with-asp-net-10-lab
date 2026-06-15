@@ -100,3 +100,6 @@ C:\Users\HP\Desktop\rest-with-asp-net-10-lab\bin\Debug\net8.0\System.Text.Json.d
 C:\Users\HP\Desktop\rest-with-asp-net-10-lab\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\HP\Desktop\rest-with-asp-net-10-lab\obj\Debug\net8.0\rest-with-asp-net-10-lab.sourcelink.json
 C:\Users\HP\Desktop\rest-with-asp-net-10-lab\bin\Debug\net8.0\Evolve.dll
+C:\Users\HP\Desktop\rest-with-asp-net-10-lab\bin\Debug\net8.0\Mapster.dll
+C:\Users\HP\Desktop\rest-with-asp-net-10-lab\bin\Debug\net8.0\Mapster.Core.dll
+C:\Users\HP\Desktop\rest-with-asp-net-10-lab\bin\Debug\net8.0\Mapster.DependencyInjection.dll

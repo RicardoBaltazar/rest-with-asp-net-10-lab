@@ -1,3 +1,4 @@
+using Data.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Model;
 
@@ -38,7 +39,7 @@ namespace Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Book book)
+        public IActionResult Create(BookDTO book)
         {
             var createdBook = _bookService.create(book);
             _logger.LogInformation("Created a new book with ID {BookId}", createdBook.Id);
@@ -47,7 +48,7 @@ namespace Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, Book book)
+        public IActionResult Update(int id, BookDTO book)
         {
             var updatedBook = _bookService.update(id, book);
 

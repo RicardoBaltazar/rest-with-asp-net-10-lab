@@ -1,3 +1,5 @@
+using Data.DTO;
+using Mapster;
 using Model;
 
 namespace Services
@@ -11,9 +13,9 @@ namespace Services
             _bookRepository = bookRepository;
         }
 
-        public Book create(Book book)
+        public BookDTO create(BookDTO book)
         {
-            return _bookRepository.create(book);
+            return _bookRepository.create(book.Adapt<Book>()).Adapt<BookDTO>();
         }
 
         public void delete(int id)
@@ -21,19 +23,19 @@ namespace Services
             _bookRepository.delete(id);
         }
 
-        public List<Book> getAll()
+        public List<BookDTO> getAll()
         {
-            return _bookRepository.getAll();
+            return _bookRepository.getAll().Adapt<List<BookDTO>>();
         }
 
-        public Book getById(int id)
+        public BookDTO getById(int id)
         {
-            return _bookRepository.getById(id);
+            return _bookRepository.getById(id).Adapt<BookDTO>();
         }
 
-        public Book update(int id, Book book)
+        public BookDTO update(int id, BookDTO book)
         {
-            return _bookRepository.update(id, book);
+            return _bookRepository.update(id, book.Adapt<Book>()).Adapt<BookDTO>();
         }
     }
 }

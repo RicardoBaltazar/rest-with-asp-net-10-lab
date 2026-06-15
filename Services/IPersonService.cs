@@ -1,15 +1,15 @@
-using Model;
+using Data.DTO;
 
 namespace Services
 {
     public interface IPersonService
     {
-        Person create(Person person);
+        PersonDTO Create(PersonDTO person);
 
-        Person getById(int id);
+        PersonDTO GetById(int id);
 
-        List<Person> getAll();
-        Person update(int id, Person person);
-        void delete(int id);
+        List<PersonDTO> GetAll();
+        PersonDTO Update(int id, PersonDTO person);
+        void Delete(int id);
     }
 }
